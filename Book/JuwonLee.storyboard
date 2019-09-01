@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Yw-5k-kfD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--마이 페이지-->
+        <scene sceneID="K77-ca-tWb">
+            <objects>
+                <viewController id="2Yw-5k-kfD" customClass="AccountViewController" customModule="Book" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="13w-E7-Yju">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(닉네임)님 안녕하세요 :)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMK-BW-hh9">
+                                <rect key="frame" x="20" y="70" width="219" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="mO8-rI-NxR">
+                                <rect key="frame" x="0.0" y="128" width="375" height="490"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" textLabel="gNO-OJ-BGV" style="IBUITableViewCellStyleDefault" id="Dqr-sR-fDR">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dqr-sR-fDR" id="VRd-rQ-2Id">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gNO-OJ-BGV">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DEG-qU-0e8" firstAttribute="bottom" secondItem="mO8-rI-NxR" secondAttribute="bottom" id="HH0-n6-y9j"/>
+                            <constraint firstItem="mO8-rI-NxR" firstAttribute="top" secondItem="jMK-BW-hh9" secondAttribute="bottom" constant="30" id="enr-KV-3gE"/>
+                            <constraint firstItem="mO8-rI-NxR" firstAttribute="leading" secondItem="DEG-qU-0e8" secondAttribute="leading" id="l6k-dp-DqU"/>
+                            <constraint firstItem="jMK-BW-hh9" firstAttribute="leading" secondItem="DEG-qU-0e8" secondAttribute="leading" constant="20" id="u0R-bY-hCI"/>
+                            <constraint firstItem="DEG-qU-0e8" firstAttribute="trailing" secondItem="mO8-rI-NxR" secondAttribute="trailing" id="wzO-CP-GLz"/>
+                            <constraint firstItem="jMK-BW-hh9" firstAttribute="top" secondItem="DEG-qU-0e8" secondAttribute="top" constant="50" id="xA7-Ve-QhK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DEG-qU-0e8"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="마이 페이지" image="profileTab" selectedImage="profileTab" id="CwW-eI-T8Z"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="helloLabel" destination="jMK-BW-hh9" id="eQR-aV-928"/>
+                        <outlet property="tableView" destination="mO8-rI-NxR" id="tZa-C2-51O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0bc-Yu-67d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="518" y="277"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="profileTab" width="32" height="32"/>
+    </resources>
+</document>
